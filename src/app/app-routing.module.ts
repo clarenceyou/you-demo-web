@@ -1,15 +1,15 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [
+const appRoutes: Routes = [
   {
     path: '',
-    children: []
+    redirectTo: '/ledger',
+    pathMatch: 'full'
   }
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+export const AppRoutingProviders: any[] = [
+];
+
+export const AppRoutingModule: ModuleWithProviders = RouterModule.forRoot(appRoutes);
