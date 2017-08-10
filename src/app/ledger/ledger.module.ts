@@ -4,6 +4,7 @@ import { SharedModule } from '../shared/shared.module';
 import { LedgerRoutingModule } from './ledger-routing.module';
 
 import { LedgerComponent } from './ledger.component';
+import { ContactService } from './shared/contact.service';
 
 @NgModule({
     imports: [
@@ -11,6 +12,9 @@ import { LedgerComponent } from './ledger.component';
         LedgerRoutingModule
     ],
     exports: [
+    ],
+    providers: [
+        ContactService
     ],
     declarations: [
         LedgerComponent

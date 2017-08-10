@@ -1,6 +1,7 @@
 import {NgModule, ModuleWithProviders} from '@angular/core';
 
 import {
+  MdCoreModule,
   MdRippleModule,
   ObserveContentModule,
   PortalModule,
@@ -29,6 +30,9 @@ import {
   MdTooltipModule,
   MdMenuModule,
   MdDialogModule,
+  MdSortModule,
+  MdPaginatorModule,
+  MdTableModule,
   PlatformModule,
   MdAutocompleteModule,
   StyleModule,
@@ -36,8 +40,10 @@ import {
   MdNativeDateModule,
   MdSelectionModule
 } from '@angular/material';
+import { CdkTableModule } from '@angular/cdk';
 
 const YOU_MATERIAL_MODULES = [
+  MdCoreModule,
   MdAutocompleteModule,
   MdButtonModule,
   MdButtonToggleModule,
@@ -63,6 +69,9 @@ const YOU_MATERIAL_MODULES = [
   MdTabsModule,
   MdToolbarModule,
   MdTooltipModule,
+  MdSortModule,
+  MdPaginatorModule,
+  MdTableModule,
   OverlayModule,
   PortalModule,
   StyleModule,
@@ -71,7 +80,8 @@ const YOU_MATERIAL_MODULES = [
   CompatibilityModule,
   ObserveContentModule,
   MdNativeDateModule,
-  MdSelectionModule
+  MdSelectionModule,
+  CdkTableModule
 ];
 
 @NgModule({
