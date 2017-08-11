@@ -8,23 +8,23 @@
 
 <div fxLayout="column">
     <div fxFlex="100">
-        <md-table [dataSource]="contactDataSource">
+        <cdk-table [dataSource]="contactDataSource">
 
             <!-- Column Definition: Firstname -->
             <ng-container cdkColumnDef="firstName">
-              <md-header-cell *mdHeaderCellDef> First Name </md-header-cell>
-              <md-cell *mdCellDef="let row"> {{row.first_name}} </md-cell>
+              <cdk-header-cell *cdkHeaderCellDef> First Name </cdk-header-cell>
+              <cdk-cell *cdkCellDef="let row"> {{row.first_name}} </cdk-cell>
             </ng-container>       
 
             <!-- Column Definition: Firstname -->
             <ng-container cdkColumnDef="lastName">
-              <md-header-cell *mdHeaderCellDef> Last Name </md-header-cell>
-              <md-cell *mdCellDef="let row"> {{row.last_name}} </md-cell>
+              <cdk-header-cell *cdkHeaderCellDef> Last Name </cdk-header-cell>
+              <cdk-cell *cdkCellDef="let row"> {{row.last_name}} </cdk-cell>
             </ng-container>  
 
-            <md-header-row *mdHeaderRowDef="displayedColumns"></md-header-row>
-            <md-row *mdRowDef="let row; columns: displayedColumns"></md-row>
+            <cdk-header-row *cdkHeaderRowDef="displayedColumns"></cdk-header-row>
+            <cdk-row *cdkRowDef="let row; columns: displayedColumns"></cdk-row>
 
-        </md-table>
+        </cdk-table>
     </div>
 </div>
