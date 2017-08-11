@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 
 import { LogService } from '../core/log.service';
 import { ContactService } from './shared/contact.service';
@@ -14,7 +14,8 @@ export class LedgerComponent implements OnInit {
 
     contactDataSource: ContactDataSource | null;
 
-    constructor(private contactService: ContactService,
+    constructor(private changeDetector: ChangeDetectorRef,
+        private contactService: ContactService,
         private logger: LogService) { }
 
     ngOnInit() { 
@@ -26,6 +27,7 @@ export class LedgerComponent implements OnInit {
     connect() {
         this.contactDataSource = new ContactDataSource(this.contactService, this.logger);  
         this.contactService.initialize();    
+        this.changeDetector.detectChanges();
     }
 
 }
